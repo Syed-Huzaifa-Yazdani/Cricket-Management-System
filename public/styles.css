@@ -1,0 +1,200 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #6a82fb, #fc5c7d);
+
+  /* Soft purple to pink gradient */
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  animation: backgroundAnimation 5s infinite alternate;
+}
+
+/* Animated Gradient Background */
+@keyframes backgroundAnimation {
+  0% {
+    background: linear-gradient(135deg, #6a82fb, #fc5c7d);
+  }
+
+  100% {
+    background: linear-gradient(135deg, #fbc2eb, #a6c1ee);
+
+    /* Lighter pastel gradient */
+  }
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  animation: bounceIn 1s ease-out;
+}
+
+h2 {
+  font-size: 1.5rem;
+  color: #fff;
+  margin: 15px 0;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+/* Form Container */
+.form-container {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 20px;
+  margin: 15px 0;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  transform: translateY(20px);
+  opacity: 0;
+  animation: slideIn 0.7s forwards, fadeIn 1s forwards;
+}
+
+.form-container:nth-child(1) {
+  animation-delay: 0.5s;
+}
+
+.form-container:nth-child(2) {
+  animation-delay: 1s;
+}
+
+.form-container:nth-child(3) {
+  animation-delay: 1.5s;
+}
+
+/* Input Fields */
+input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 5px;
+  font-size: 1rem;
+  border: none;
+  background: #f3f4f6;
+
+  /* Soft neutral background for inputs */
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+input:focus {
+  outline: none;
+  background: #3498db;
+  color: #fff;
+  border: 2px solid #2980b9;
+}
+
+/* Button Styles */
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #ff7f50;
+
+  /* Coral orange for a bold button */
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #ff6347;
+
+  /* Darker coral for hover effect */
+  transform: scale(1.05);
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+/* Animation Effects */
+@keyframes slideIn {
+  from {
+    transform: translateY(50px);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* Player List Styles */
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+li {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+li:hover {
+  background: #ffeb3b;
+
+  /* Bright yellow hover effect */
+  transform: scale(1.05);
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  .form-container {
+    width: 90%;
+    margin: 10px 0;
+  }
+
+  input,
+  button {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .form-container {
+    width: 100%;
+  }
+
+  input,
+  button {
+    font-size: 0.9rem;
+  }
+}
