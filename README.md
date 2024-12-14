@@ -23,4 +23,7 @@ A full-stack web application for managing cricket players' information, includin
   - Visual Studio Code for development
   - Postman for API testing
   - Git for version control
+<<<<<<< HEAD
 
+=======
+>>>>>>> c27a2072c6eb2b6939d5dbdc35e93b2fee70b17d
